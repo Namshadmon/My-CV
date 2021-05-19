@@ -5,8 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'Exception.php';
 require 'PHPMailer.php';
-//require 'SMTP.php';
-require 'POP3.php';
+require 'SMTP.php';
+//require 'POP3.php';
 require 'form_setting.php';
 
 if(isset($_POST)){
@@ -23,11 +23,22 @@ if(isset($_POST)){
 
 	$mail = new PHPMailer;
 
-	$mail->From = $from;
-	$mail->FromName = $fromName;
-	$mail->addAddress($to, 'Admin');
+	//SMTP
+	$mail->isSMTP();
+	$mail->Host = 'smtp.gmail.com';
+	$mail->SMTPAuth = true;
+	$mail->FromName = "notification.namshad@gmail.com";
+	$mail->Password = 'namshad$5420';
+	$mail->Port = 465;
+
+	// $mail->From = $from;
+	// $mail->FromName = $fromName;
+	// $mail->addAddress($to, 'Admin');
 
 	$mail->isHTML(true); 
+	$mail->setFrom($email, $name);
+	$mail->addAddress($to, 'Admin');
+
 	$mail->CharSet = $charset;
 
 	$mail->Subject = $subj;
