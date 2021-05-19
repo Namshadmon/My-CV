@@ -395,6 +395,7 @@ $(function () {
 				url: 'mailer/feedback.php',
 				type: 'post',
 				dataType: 'json',
+				headers: { "Content-Type": "multipart/form-data" },
 				data: 'name=' + $("#cform").find('input[name="name"]').val() + '&email=' + $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
 				beforeSend: function () {
 
