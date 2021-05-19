@@ -361,7 +361,6 @@ $(function () {
 	var getUrl = window.location;
 	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 
-	var contextPath = "${pageContext.request.contextPath}";
 
 	/*
 		Validate Contact Form
@@ -393,7 +392,7 @@ $(function () {
 		success: "valid",
 		submitHandler: function () {
 			$.ajax({
-				url: "${pageContext.request.contextPath}/mailer/feedback.php",
+				url: 'mailer/feedback.php',
 				type: 'post',
 				dataType: 'json',
 				data: 'name=' + $("#cform").find('input[name="name"]').val() + '&email=' + $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
