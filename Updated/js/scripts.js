@@ -400,6 +400,7 @@ $(function () {
 
 				},
 				success: function (data) {
+					console.log(data);
 					$('#cform').fadeOut();
 					$('.alert-success').delay(1000).fadeIn();
 				}
