@@ -392,7 +392,7 @@ $(function () {
 		success: "valid",
 		submitHandler: function () {
 			$.ajax({
-				url: baseUrl+'/updated/mailer/feedback.php',
+				url: baseUrl+'/mailer/feedback.php',
 				type: 'post',
 				dataType: 'json',
 				data: 'name=' + $("#cform").find('input[name="name"]').val() + '&email=' + $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
