@@ -31,7 +31,7 @@ if (isset($_POST)) {
 	$mail->Port = 465; // or 587
 	$mail->IsHTML(true);
 	$mail->Username = "notification.namshad@gmail.com";
-	$mail->Password = "namshad$5420";
+	$mail->Password = "";
 	$mail->SetFrom("notification.namshad@gmail.com");
 	//$mail->Subject = "Test";
 	//$mail->Body = "hello";

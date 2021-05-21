@@ -392,7 +392,8 @@ $(function () {
 		success: "valid",
 		submitHandler: function () {
 			$.ajax({
-				url: 'mailer/feedback.php',
+				// url: 'mailer/feedback.php',
+				url:'https://script.google.com/macros/s/AKfycbxKQe2zx_c-gu8-xE-mMKQahfhKe_0WDr4Dv0vJn84BPOBkAhH95gBWlbjg9j0s_n7CKA/exec',
 				type: 'post',
 				dataType: 'json',
 				data: 'name=' + $("#cform").find('input[name="name"]').val() + '&email=' + $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
