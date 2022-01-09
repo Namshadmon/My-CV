@@ -701,7 +701,8 @@ input[type="file"] {
 		-khtml-border-radius: 0 0 4px 0;
 	}
 	.header .top-menu ul {
-		background: #fff;
+		/* background: #fff; */
+		background: rgba(0, 0, 0, 0.2);
 	}
 }
 
